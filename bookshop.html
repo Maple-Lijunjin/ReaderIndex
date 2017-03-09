@@ -41,11 +41,44 @@
 	    	left: 304px;
             top: 30px;
 	    }
-
 	    .general-cate {
 	    	display: inline-block;
 	    	margin: 12px 35px;
 	    }
+        table {
+            width: 100%;
+            background-color: #fff;
+        }
+        tr {
+            width: 100%;
+        }
+        td {
+            border: 1px solid #f3f3f3;
+            border-top: none; 
+            width: 32%;
+            padding: 10px;
+
+        }
+        td:nth-child(3n) {
+            border-right: none;
+        }
+        td:nth-child(3n+1) {
+            border-left: none;
+        }
+        .category-name {
+            color: #999;/*缩写形式*/
+            padding: 10px;
+            font-size: 14px;
+        }
+        td a {
+            display: inline-block;
+            font-size: 8px;
+            -webkit-transform: scale(0.8);
+            color: #fff;
+            background-color: red;
+            padding: 0 3px 2px 3px;
+            margin-left: 10px;
+        }
 	  
 	</style>
 </head>
@@ -111,7 +144,99 @@
             <!--精选end-->
 
             <!--分类start-->
-            <div class="swiper-slide" id="category">Slide 2Slide 2Slide 2Slide 2</div>
+            <div class="swiper-slide" id="category">
+                <p class="category-name">出版</p>
+                <table border="1">
+                    <tr>
+                        <td>小说<a>热</a></td>
+                        <td>文学<a>热</a></td>
+                        <td>传记</td>
+                    </tr>
+                    <tr>
+                        <td>历史</td>
+                        <td>青春</td>
+                        <td>心理</td>
+                    </tr>
+                    <tr>
+                        <td>社科</td>
+                        <td>励志</td>
+                        <td>政治</td>
+                    </tr>
+                    <tr>
+                        <td>军事</td>
+                        <td>经济</td>
+                        <td>管理</td>
+                    </tr>
+                    <tr>
+                        <td>理财</td>
+                        <td>旅游</td>
+                        <td>美食</td>
+                    </tr>
+                    <tr>
+                        <td>时尚</td>
+                        <td>健身</td>
+                        <td>孕产</td>
+                    </tr>
+                    <tr>
+                        <td>少儿<a>热</a></td>
+                        <td>亲子</td>
+                        <td>科学</td>
+                    </tr>
+                    <tr>
+                        <td>科普</td>
+                        <td>医学</td>
+                        <td>教辅</td>
+                    </tr>
+                    <tr>
+                        <td>外语</td>
+                        <td>工业</td>
+                        <td>宗教</td>
+                    </tr>
+                    <tr>
+                        <td>哲学</td>
+                        <td>文化</td>
+                        <td>艺术</td>
+                    </tr>
+                    <tr>
+                        <td>修养</td>
+                        <td>养生</td>
+                        <td>两性</td>
+                    </tr>
+                    <tr>
+                        <td>风水</td>
+                        <td>家居</td>
+                        <td>建筑</td>
+                    </tr>
+                    <tr>
+                        <td>法律</td>
+                        <td>农业</td>
+                        <td>休闲</td>
+                    </tr>
+                    <tr>
+                        <td>体育</td>
+                        <td>外文</td>
+                        <td>计算机<a>热</a></td>
+                    </tr>
+                </table>
+                <p class="category-name">男频</p>
+                <table border="1">
+                    <tr>
+                        <td>玄幻</td>
+                        <td>奇幻</td>
+                        <td>武侠</td>
+                    </tr>
+                    <tr>
+                        <td>仙侠</td>
+                        <td>都市</td>
+                        <td>校园</td>
+                    </tr>
+                    <tr>
+                        <td>历史</td>
+                        <td>军事</td>
+                        <td class="list-more">更多<span>▽</span></td>
+                    </tr>
+                </table>
+            </div>
             <!--分类end-->
 
             <!--排行start-->
