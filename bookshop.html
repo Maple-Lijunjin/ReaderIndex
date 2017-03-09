@@ -233,7 +233,12 @@
                     <tr>
                         <td>历史</td>
                         <td>军事</td>
-                        <td class="list-more">更多<span>▽</span></td>
+                        <td id="man_more">更多&nbsp;&nbsp;<span>▽</span></td>
+                    </tr>
+                    <tr id="man_hide" style="display: none">
+                        <td>竞技</td>
+                        <td>科技</td>
+                        <td id="man_less">收起&nbsp;&nbsp;<span>△</span></td>
                     </tr>
                 </table>
             </div>
@@ -256,8 +261,23 @@
     </div>
 
     <script type="text/javascript" src="js/swiper.min.js"></script>
-    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <!-- <script type="text/javascript" src="js/zepto.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
+        $(function() {
+
+            $("#man_more").click = function() {
+                alert("11");
+                $("#man_hide").css("display", "block");
+                this.text("游戏");
+            }
+            $("#man_less").click = function() {
+                $("#man_hide").css("display", "none");
+                $("#man_more").html("更多&nbsp;&nbsp;<span>▽</span>");
+            }
+        });
+
+
         // $(function(){
         	var icons = document.getElementsByClassName("footer")[0].getElementsByClassName("general-cate");
         	icons[0].style.color = "#e1544d";
