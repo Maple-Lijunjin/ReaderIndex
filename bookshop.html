@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookShop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/bookshop.css">
+	<style type="text/css">
+	    .footer {
+	    	position: fixed;
+	    	width: 100%;
+	    	height: 10%;
+	    	top: 90%;
+	    	left: 0%;
+	    	z-index: 10;
+	    	background-color: #fff;
+	    	color: gray;
+	    }
+	    .footer a {
+	    	font-size: 12px;
+	    }
+	    #select a {
+	    	position: absolute;
+	    	left: 30px;
+            top: 30px;
+	    }
+	    #classify a {
+	    	position: absolute;
+	    	left: 122px;
+            top: 30px;
+	    }
+	    #rank a {
+	    	position: absolute;
+	    	left: 214px;
+            top: 30px;
+	    }
+	    #circle a {
+	    	position: absolute;
+	    	left: 304px;
+            top: 30px;
+	    }
+
+	    .general-cate {
+	    	display: inline-block;
+	    	margin: 12px 35px;
+	    }
+	  
+	</style>
+</head>
+<body>
+    <div class="search-header">
+    	<span class="search-left"><i class="iconfont">&#xe658;</i></span>
+    	<span class="search-text">精选</span>
+    	<span class="search-box"><i class="iconfont">&#xe625;</i></span>
+    </div>
+    <div class="swiper-container" id="swiper_main">
+    	<div class="swiper-wrapper">
+    		<!--精选start-->
+    		<div class="swiper-slide" id="best_book">
+    			<div class="swiper-container" id="swiper_best">
+    				<div class="swiper-wrapper" id="best_book_wrapper">
+    					<div class="swiper-slide"><img src="images/banner1.jpg"></div>
+    					<div class="swiper-slide"><img src="images/banner2.jpg"></div>
+    					<div class="swiper-slide"><img src="images/banner3.jpg"></div>
+    					<div class="swiper-slide"><img src="images/banner4.jpg"></div>
+    				</div>
+        	    </div>
+        	    <!--频道图标-->
+        	    <div class="best-category">
+        		    <span><i class="iconfont cate" id="boy">&#xe648;<a>男频</a></i></span>
+        		    <span><i class="iconfont cate" id="girl">&#xe505;<a>女频</a></i></span>
+        		    <span><i class="iconfont cate" id="publish">&#xe6c5;<a>出版</a></i></span>
+        		    <span><i class="iconfont cate" id="cartoon">&#xe600;<a>漫画</a></i></span>
+        		    <span><i class="iconfont cate" id="free">&#xe61a;<a>免费</a></i></span>
+        		    <span><i class="iconfont cate" id="more">&#xe60c;<a>更多</a></i></span>
+        	    </div>
+        	    <!--专题-->
+        	    <div class="topic-container">
+        	    	<!--专题头名字说明-->
+        	    	<div class="topic-top">
+        	    		<p class="top-title">出版频道</p>
+        	    		<p class="top-detail">新书、畅销、首发、精彩尽收眼底 本周人气101.2万</p>
+        	    	</div>
+        	    	<!--每个主题标题-该组件通用-->
+        	    	<div class="topic-list">
+        	    		<div class="topic">
+        	    			<span class="topic-name">好书推荐</span>
+        	    			<span class="topic-desc">进入出版通道&nbsp;&nbsp;></span>
+        	    		</div>
+        	    		<!--此处文本会超出布局，因为用了absolute布局-->
+        	    		<div class="book-container">
+        	    			<a class="every-book">
+        	    				<span class="book-face"><img src="images/1.png"></span>
+        	    				<span class="book-title">男神我喜欢你</span>
+        	    			</a>
+        	    			<a class="every-book">
+        	    				<span class="book-face"><img src="images/1.png"></span>
+        	    				<span class="book-title">男神我喜欢你</span>
+        	    			</a>
+        	    			<a class="every-book">
+        	    				<span class="book-face"><img src="images/1.png"></span>
+        	    				<span class="book-title">男神我喜欢你</span>
+        	    			</a>       		    	
+        	    		</div>
+        	    	</div>		    
+        	    </div>
+        	</div>
+
+            <!--精选end-->
+
+            <!--分类start-->
+            <div class="swiper-slide" id="category">Slide 2Slide 2Slide 2Slide 2</div>
+            <!--分类end-->
+
+            <!--排行start-->
+            <div class="swiper-slide" id="rank">Slide 3</div>
+            <!--排行end-->
+
+            <!--圈子start-->
+            <div class="swiper-slide" id="moment">Slide 4</div>
+            <!--圈子start-->
+        </div>
+        <div class="footer">
+        	<span><i class="iconfont general-cate" id="select">&#xe63b;<a>精选</a></i></span>
+        	<span><i class="iconfont general-cate" id="classify">&#xe602;<a>分类</a></i></span>
+        	<span><i class="iconfont general-cate" id="rank">&#xe610;<a>排行</a></i></span>
+        	<span><i class="iconfont general-cate" id="circle">&#xe60a;<a>圈子</a></i></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        // $(function(){
+        	var icons = document.getElementsByClassName("footer")[0].getElementsByClassName("general-cate");
+        	icons[0].style.color = "#e1544d";
+        	function clearIconColor() {
+        		for (var i = 0; i < icons.length; i++) {
+        			icons[i].style.color = "gray";
+        		}
+        	}
+        	//添加滑动事件
+    	    for (var i = 0; i < icons.length; i++) {
+    		    icons[i].index = i;
+    		    icons[i].onclick = function() {
+    			//跳转至对应项
+    			mySwiperGeneral.slideTo(1, 100, true);
+    			alert(i);
+    		    }
+    	    }
+        // });
+    	var mySwiperGeneral = new Swiper ('#swiper_main', {
+    		direction: 'horizontal',
+    		loop: true,
+    		onSlideChangeEnd: function() {
+    			clearIconColor();
+    			var index = mySwiperGeneral.activeIndex;
+    			icons[index].style.color = "e1544d";
+    		},
+    	});
+    	
+    	var mySwiper = new Swiper ('#swiper_best', {
+    		direction: 'horizontal',
+    		loop: true,
+            // pagination: '.swiper-pagination',// 分页器
+            // // 如果需要前进后退按钮
+            // nextButton: '.swiper-button-next',
+            // prevButton: '.swiper-button-prev',
+            // // 如果需要滚动条
+            // scrollbar: '.swiper-scrollbar',
+        });                
+    </script>
+</body>
+</html>

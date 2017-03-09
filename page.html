@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<style type="text/css">
+	    body {
+	    	width: 100%;
+	    }
+	    @font-face {
+	    	font-family: 'iconfont';
+	    	src: url('iconfont/iconfont.eot');
+	    	src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+	    	url('iconfont/iconfont.woff') format('woff'),
+	    	url('iconfont/iconfont.ttf') format('truetype'),
+	    	url('iconfont/iconfont.svg#iconfont') format('svg');
+	    }
+	    .iconfont{
+	    	font-family:"iconfont" !important;
+	    	font-size:16px;font-style:normal;
+	    	-webkit-font-smoothing: antialiased;
+	    	-webkit-text-stroke-width: 0.2px;
+	    	-moz-osx-font-smoothing: grayscale;
+	    }
+		.shop_header {
+			width: 100%;
+			height: 40px;
+			border-bottom: 2px solid #bc804c;
+			background-color: #e4a975;
+			position: relative;
+			box-shadow: 0px 5px 5px #563019;
+		}
+		.header_category {
+			position: absolute;
+			top: 11px;
+			left: 10px;
+
+		}
+		.header_ireader {
+			position: absolute;
+			top: 11px;
+			left: 42px;
+		}
+		.header_search {
+			position: absolute;
+			top: 12px;
+			right: 80px;
+		}
+		.header_shop {
+			position: absolute;
+			top: 10px;
+			right: 26px;
+		}
+		.header_arow {
+			position: absolute;
+			top: 12px;
+			right: 8px;
+		}
+		.shop_content {
+			width: 100%;
+			height: 500px;
+			background-color: #995f39;
+			position: relative;
+		}
+		.shop_content img {
+			width: 24%;
+			height: 120px;
+			transition: width 2s;
+			-moz-transition: width 2s; /* Firefox 4 */
+			-webkit-transition: width 2s; /* Safari 和 Chrome */
+			-o-transition: width 2s; /* Opera */
+		}
+		.shop_content img:hover {
+			width: 100%;
+			height: 500px;
+		}
+		.book_first {
+			margin-left: 6%;
+			margin-right: 6%;
+		}
+		.book_second {
+			margin-right: 6.5%;
+		}
+		.book_third {
+			margin-right: 6.5%;
+		}
+		.bookshelf {
+			padding-top: 50px;
+		}
+		.devide {
+			width: 96%;
+			height: 8px;
+			margin: 0 auto;
+			background-color: #e4a975;
+			box-shadow: 0px 2px 10px #563019;
+			border-bottom: 1px solid #563019;
+			border-right: 1px solid #563019;
+		}
+	</style>
+</head>
+<body>
+	<div id="book-container">
+		<div class="shop_header">
+			<span class="header_category"><i class="iconfont">&#xf0075;</i></span>
+			<span class="header_ireader">iReader</span>
+			<span class="header_search"><i class="iconfont">&#xe606;</i></span>
+			<span class="header_shop">书城</span>
+			<span class="header_arow"><i class="iconfont">&#xe646;</i></span>
+		</div>
+		<div class="shop_content">
+			<div class="bookshelf">
+				<span class="book_first"><img src="images/1.png"></span>
+				<span class="book_second"><img src="images/1.png"></span>
+				<span class="book_third"><img src="images/1.png"></span>
+				<div class="devide"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
