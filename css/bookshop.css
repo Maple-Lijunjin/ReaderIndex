@@ -180,3 +180,79 @@
 		.topic-list {
 			height: 210px;
 		}
+		.footer {
+	    	position: fixed;
+	    	width: 100%;
+	    	height: 10%;
+	    	top: 90%;
+	    	left: 0%;
+	    	z-index: 10;
+	    	background-color: #fff;
+	    	color: gray;
+	    }
+	    .footer a {
+	    	font-size: 12px;
+	    }
+	    #select a {
+	    	position: absolute;
+	    	left: 30px;
+            top: 30px;
+	    }
+	    #classify a {
+	    	position: absolute;
+	    	left: 122px;
+            top: 30px;
+	    }
+	    #rank a {
+	    	position: absolute;
+	    	left: 214px;
+            top: 30px;
+	    }
+	    #circle a {
+	    	position: absolute;
+	    	left: 304px;
+            top: 30px;
+	    }
+	    .general-cate {
+	    	display: inline-block;
+	    	margin: 12px 35px;
+	    }
+	    /*category start*/
+        table {
+            width: 100%;
+            background-color: #fff;
+        }
+        tr {
+            width: 100%;
+        }
+        td {
+            border: 1px solid #f3f3f3;
+            border-top: none; 
+            width: 32%;
+            padding: 10px;
+
+        }
+        td:nth-child(3n) {
+            border-right: none;
+        }
+        td:nth-child(3n+1) {
+            border-left: none;
+        }
+        .category-name {
+            color: #999;/*缩写形式*/
+            padding: 10px;
+            font-size: 14px;
+        }
+        td a {
+            display: inline-block;
+            font-size: 8px;
+            -webkit-transform: scale(0.8);
+            color: #fff;
+            background-color: red;
+            padding: 0 3px 2px 3px;
+            margin-left: 10px;
+        }
+        /*category end*/
+        /*rank start*/
+        
+        /*rank end*/
