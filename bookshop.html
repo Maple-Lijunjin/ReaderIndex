@@ -8,77 +8,108 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/bookshop.css">
 	<style type="text/css">
-	    .footer {
-	    	position: fixed;
-	    	width: 100%;
-	    	height: 10%;
-	    	top: 90%;
-	    	left: 0%;
-	    	z-index: 10;
-	    	background-color: #fff;
-	    	color: gray;
-	    }
-	    .footer a {
-	    	font-size: 12px;
-	    }
-	    #select a {
-	    	position: absolute;
-	    	left: 30px;
-            top: 30px;
-	    }
-	    #classify a {
-	    	position: absolute;
-	    	left: 122px;
-            top: 30px;
-	    }
-	    #rank a {
-	    	position: absolute;
-	    	left: 214px;
-            top: 30px;
-	    }
-	    #circle a {
-	    	position: absolute;
-	    	left: 304px;
-            top: 30px;
-	    }
-	    .general-cate {
-	    	display: inline-block;
-	    	margin: 12px 35px;
-	    }
-        table {
+        @font-face {
+          font-family: 'rankfont';
+          src: url('rankfont/iconfont.eot');
+          src: url('rankfont/iconfont.eot?#iefix') format('embedded-opentype'),
+          url('rankfont/iconfont.woff') format('woff'),
+          url('rankfont/iconfont.ttf') format('truetype'),
+          url('rankfont/iconfont.svg#iconfont') format('svg');
+        }
+        .rankfont{
+          font-family:"rankfont" !important;
+          font-size:16px;font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .rankfont {
+            color: #efbc48;
+        }
+        .rankfont a {
+            color: #5b5b5b;
+            font-size: 12px;
+        }
+        .rank-top {
+            position: relative;
             width: 100%;
+            height: 86px;
+        }
+        .rank-top span {
+            display: inline-block;
+            width: 33%;
+            height: 60px;
+            background-color: #fff;
+            margin-right: .5%;
+            text-align: center;
+            padding-top: 17px;
+        }
+        .rank-top span:nth-child(3n) {
+            margin-right: 0;
+        }
+        #ticket a {
+            position: absolute;
+            left: 40px;
+            top: 36px;
+        }
+        #favor a {
+            position: absolute;
+            left: 150px;
+            top: 36px;
+        }
+        #newbook a {
+            position: absolute;
+            right: 40px;
+            top: 36px;
+        }
+        .recommend {
+            margin-bottom: 6px;
+        }
+        .recommend img {
+            width: 100%;
+        }
+        .rank-section {
+            position: relative;
             background-color: #fff;
         }
-        tr {
-            width: 100%;
+        .section-title {
+            font-size: 12px;
+            width: 94%;
+            margin: 0 3%;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #f3f3f3;
         }
-        td {
-            border: 1px solid #f3f3f3;
-            border-top: none; 
-            width: 32%;
-            padding: 10px;
-
+        .section-detail {
+            font-size: 16px;
+            width: 94%;
+            margin: 0 3%;
+            height: 60px;
+            line-height: 60px;
+            border-bottom: 1px solid #f3f3f3;
         }
-        td:nth-child(3n) {
-            border-right: none;
+        .section-detail:last-child {
+            border-bottom: none;
         }
-        td:nth-child(3n+1) {
-            border-left: none;
+        .section-detail a {
+            display: inline-block;
+            margin-left: 10px;
         }
-        .category-name {
-            color: #999;/*缩写形式*/
-            padding: 10px;
-            font-size: 14px;
-        }
-        td a {
+        .section-detail span {
             display: inline-block;
             font-size: 8px;
             -webkit-transform: scale(0.8);
-            color: #fff;
-            background-color: red;
-            padding: 0 3px 2px 3px;
-            margin-left: 10px;
+            color: #999;
+            width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+
         }
+
+
+
 	  
 	</style>
 </head>
@@ -235,17 +266,56 @@
                         <td>军事</td>
                         <td id="man_more">更多&nbsp;&nbsp;<span>▽</span></td>
                     </tr>
-                    <tr id="man_hide" style="display: none">
+                    <tr id="man_hide" style="display: none;">
                         <td>竞技</td>
                         <td>科技</td>
                         <td id="man_less">收起&nbsp;&nbsp;<span>△</span></td>
+                    </tr>
+                </table>
+                <p class="category-name">漫画</p>
+                <table border="1">
+                    <tr>
+                        <td>搞笑</td>
+                        <td>少女<a>热</a></td>
+                        <td>少年</td>
+                    </tr>
+                    <tr>
+                        <td>治愈</td>
+                        <td>恐怖</td>
+                        <td>玄幻<a>热</a></td>
+                    </tr>
+                    <tr>
+                        <td>古风</td>
+                        <td>绘本</td>
+                        <td id="cartoon_more">更多&nbsp;&nbsp;<span>▽</span></td>
+                    </tr>
+                    <tr id="cartoon_hide" style="display: none;">
+                        <td>推理</td>
+                        <td>恋爱</td>
+                        <td id="cartoon_less">收起&nbsp;&nbsp;<span>△</span></td>
                     </tr>
                 </table>
             </div>
             <!--分类end-->
 
             <!--排行start-->
-            <div class="swiper-slide" id="rank">Slide 3</div>
+            <div class="swiper-slide" id="allrank">
+                <div class="rank-top">
+                    <!--为了去除inline-block之间的空隙-->
+                    <span><i class="rankfont" id="ticket">&#xe65d;<a>月票榜</a></i></span
+                    ><span><i class="rankfont" id="favor">&#xe661;<a>用户喜爱榜</a></i></span
+                    ><span><i class="rankfont" id="newbook">&#xe631;<a>新书榜</a></i></span>
+                </div>
+                <div class="recommend">
+                    <img src="images/banner5.jpg">
+                </div>
+                <div class="rank-section">
+                    <p class="section-title">出版</p>
+                    <p class="section-detail"><i class="rankfont">&#xe664;</i><a>掌阅畅销榜</a><span>三生三世十里桃花--青丘女君与东华帝君的故事</span></p>
+                    <p class="section-detail"><i class="rankfont">&#xe627;</i><a>特价折扣榜</a><span>人类简史：从动物到上帝</span></p>
+                    <p class="section-detail"><i class="rankfont">&#xe65c;</i><a>更多权威榜</a><span>最好的我们（上）</span></p>
+                </div>
+            </div>
             <!--排行end-->
 
             <!--圈子start-->
@@ -265,16 +335,23 @@
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
-
-            $("#man_more").click = function() {
-                alert("11");
-                $("#man_hide").css("display", "block");
-                this.text("游戏");
-            }
-            $("#man_less").click = function() {
-                $("#man_hide").css("display", "none");
+            //可以将这个点击切换的封装成一个方法
+            $("#man_more").click(function() {
+                $("#man_hide").show();
+                $("#man_more").text("游戏");
+            });
+            $("#man_less").click(function() {
+                $("#man_hide").hide();
                 $("#man_more").html("更多&nbsp;&nbsp;<span>▽</span>");
-            }
+            });
+            $("#cartoon_more").click(function() {
+                $("#cartoon_hide").show();
+                $("#cartoon_more").text("竞技");
+            });
+            $("#cartoon_less").click(function() {
+                $("#cartoon_hide").hide();
+                $("#cartoon_more").html("更多&nbsp;&nbsp;<span>▽</span>");
+            });
         });
 
 
@@ -302,7 +379,7 @@
     		onSlideChangeEnd: function() {
     			clearIconColor();
     			var index = mySwiperGeneral.activeIndex;
-    			icons[index].style.color = "e1544d";
+    			icons[index].style.color = "#e1544d";
     		},
     	});
     	
